@@ -1,0 +1,322 @@
+2010-10-13 18:02:30   INFO [main] (FrameworkServlet.java:277) - FrameworkServlet 'SpringMVC': initialization started
+2010-10-13 18:02:30   INFO [main] (AbstractApplicationContext.java:411) - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@1c0b8a0: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 18:02:30 CST 2010]; root of context hierarchy
+2010-10-13 18:02:30   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-front.xml]
+2010-10-13 18:02:30   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-persist.xml]
+2010-10-13 18:02:30   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-service.xml]
+2010-10-13 18:02:30   INFO [main] (AbstractApplicationContext.java:426) - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@1c0b8a0]: org.springframework.beans.factory.support.DefaultListableBeanFactory@25bd56
+2010-10-13 18:02:30   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-config.properties]
+2010-10-13 18:02:30   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-address.properties]
+2010-10-13 18:02:30   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [persist.properties]
+2010-10-13 18:02:30   INFO [main] (DefaultListableBeanFactory.java:414) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@25bd56: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:02:30   INFO [main] (DefaultSingletonBeanRegistry.java:421) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@25bd56: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:02:30  ERROR [main] (FrameworkServlet.java:290) - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pageFactory' defined in class path resource [spring-front.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'pageFiles' of bean class [com.recyclechina.common.page.DefaultPageFactory]: Bean property 'pageFiles' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1279)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:402)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:316)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:282)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:126)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:212)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1173)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:993)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4187)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4496)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.startup.Embedded.start(Embedded.java:825)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.startContainer(AbstractRunMojo.java:533)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.execute(AbstractRunMojo.java:239)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:490)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(DefaultLifecycleExecutor.java:569)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:539)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'pageFiles' of bean class [com.recyclechina.common.page.DefaultPageFactory]: Bean property 'pageFiles' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:801)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	... 48 more
+2010-10-13 18:04:13   INFO [main] (FrameworkServlet.java:277) - FrameworkServlet 'SpringMVC': initialization started
+2010-10-13 18:04:13   INFO [main] (AbstractApplicationContext.java:411) - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@14f1726: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 18:04:13 CST 2010]; root of context hierarchy
+2010-10-13 18:04:13   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-front.xml]
+2010-10-13 18:04:13   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-persist.xml]
+2010-10-13 18:04:13   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-service.xml]
+2010-10-13 18:04:13   INFO [main] (AbstractApplicationContext.java:426) - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@14f1726]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1fcca7b
+2010-10-13 18:04:13   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-config.properties]
+2010-10-13 18:04:13   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-address.properties]
+2010-10-13 18:04:13   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [persist.properties]
+2010-10-13 18:04:13   INFO [main] (DefaultListableBeanFactory.java:414) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1fcca7b: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:04:13   INFO [main] (DefaultSingletonBeanRegistry.java:421) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1fcca7b: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:04:13  ERROR [main] (FrameworkServlet.java:290) - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pageFactory' defined in class path resource [spring-front.xml]: Invocation of init method failed; nested exception is org.dom4j.DocumentException: /home/xiaoming/dev/reborn/trunk/reborn-front/src/main/webapp/WEB-INF/conf/page/index_page.xml (No such file or directory) Nested exception: /home/xiaoming/dev/reborn/trunk/reborn-front/src/main/webapp/WEB-INF/conf/page/index_page.xml (No such file or directory)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:473)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:402)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:316)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:282)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:126)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:212)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1173)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:993)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4187)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4496)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.startup.Embedded.start(Embedded.java:825)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.startContainer(AbstractRunMojo.java:533)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.execute(AbstractRunMojo.java:239)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:490)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(DefaultLifecycleExecutor.java:569)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:539)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+Caused by: org.dom4j.DocumentException: /home/xiaoming/dev/reborn/trunk/reborn-front/src/main/webapp/WEB-INF/conf/page/index_page.xml (No such file or directory) Nested exception: /home/xiaoming/dev/reborn/trunk/reborn-front/src/main/webapp/WEB-INF/conf/page/index_page.xml (No such file or directory)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:266)
+	at com.recyclechina.common.page.DefaultPageFactory.afterPropertiesSet(DefaultPageFactory.java:46)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1369)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1335)
+	... 47 more
+2010-10-13 18:05:27   INFO [main] (FrameworkServlet.java:277) - FrameworkServlet 'SpringMVC': initialization started
+2010-10-13 18:05:27   INFO [main] (AbstractApplicationContext.java:411) - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@195ff24: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 18:05:27 CST 2010]; root of context hierarchy
+2010-10-13 18:05:27   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-front.xml]
+2010-10-13 18:05:27   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-persist.xml]
+2010-10-13 18:05:27   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-service.xml]
+2010-10-13 18:05:27   INFO [main] (AbstractApplicationContext.java:426) - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@195ff24]: org.springframework.beans.factory.support.DefaultListableBeanFactory@bb6255
+2010-10-13 18:05:27   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-config.properties]
+2010-10-13 18:05:27   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-address.properties]
+2010-10-13 18:05:27   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [persist.properties]
+2010-10-13 18:05:27   INFO [main] (DefaultListableBeanFactory.java:414) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@bb6255: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:05:27   INFO [main] (DefaultSingletonBeanRegistry.java:421) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@bb6255: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:05:27  ERROR [main] (FrameworkServlet.java:290) - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pageFactory' defined in class path resource [spring-front.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:473)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:402)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:316)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:282)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:126)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:212)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1173)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:993)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4187)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4496)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.startup.Embedded.start(Embedded.java:825)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.startContainer(AbstractRunMojo.java:533)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.execute(AbstractRunMojo.java:239)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:490)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(DefaultLifecycleExecutor.java:569)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:539)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+Caused by: java.lang.NullPointerException
+	at com.recyclechina.common.page.DefaultPageFactory.afterPropertiesSet(DefaultPageFactory.java:63)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1369)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1335)
+	... 47 more
+2010-10-13 18:06:31   INFO [main] (FrameworkServlet.java:277) - FrameworkServlet 'SpringMVC': initialization started
+2010-10-13 18:06:31   INFO [main] (AbstractApplicationContext.java:411) - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@1ac8b37: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 18:06:31 CST 2010]; root of context hierarchy
+2010-10-13 18:06:31   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-front.xml]
+2010-10-13 18:06:32   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-persist.xml]
+2010-10-13 18:06:32   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-service.xml]
+2010-10-13 18:06:32   INFO [main] (AbstractApplicationContext.java:426) - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@1ac8b37]: org.springframework.beans.factory.support.DefaultListableBeanFactory@69a6cb
+2010-10-13 18:06:32   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-config.properties]
+2010-10-13 18:06:32   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-address.properties]
+2010-10-13 18:06:32   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [persist.properties]
+2010-10-13 18:06:32   INFO [main] (DefaultListableBeanFactory.java:414) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@69a6cb: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:13:05   INFO [main] (DefaultSingletonBeanRegistry.java:421) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@69a6cb: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:13:05  ERROR [main] (FrameworkServlet.java:290) - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pageFactory' defined in class path resource [spring-front.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:473)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:402)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:316)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:282)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:126)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:212)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1173)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:993)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4187)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4496)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.startup.Embedded.start(Embedded.java:825)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.startContainer(AbstractRunMojo.java:533)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.execute(AbstractRunMojo.java:239)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:490)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(DefaultLifecycleExecutor.java:569)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:539)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+Caused by: java.lang.NullPointerException
+	at com.recyclechina.common.page.DefaultPageFactory.afterPropertiesSet(DefaultPageFactory.java:63)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1369)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1335)
+	... 47 more
+2010-10-13 18:13:23   INFO [main] (FrameworkServlet.java:277) - FrameworkServlet 'SpringMVC': initialization started
+2010-10-13 18:13:23   INFO [main] (AbstractApplicationContext.java:411) - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@1284903: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 18:13:23 CST 2010]; root of context hierarchy
+2010-10-13 18:13:23   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-front.xml]
+2010-10-13 18:13:23   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-persist.xml]
+2010-10-13 18:13:23   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-service.xml]
+2010-10-13 18:13:23   INFO [main] (AbstractApplicationContext.java:426) - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@1284903]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1879b
+2010-10-13 18:13:23   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-config.properties]
+2010-10-13 18:13:23   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-address.properties]
+2010-10-13 18:13:23   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [persist.properties]
+2010-10-13 18:13:23   INFO [main] (DefaultListableBeanFactory.java:414) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1879b: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:16:37   INFO [main] (FrameworkServlet.java:277) - FrameworkServlet 'SpringMVC': initialization started
+2010-10-13 18:16:37   INFO [main] (AbstractApplicationContext.java:411) - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@1bca486: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 18:16:37 CST 2010]; root of context hierarchy
+2010-10-13 18:16:37   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-front.xml]
+2010-10-13 18:16:37   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-persist.xml]
+2010-10-13 18:16:37   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-service.xml]
+2010-10-13 18:16:37   INFO [main] (AbstractApplicationContext.java:426) - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@1bca486]: org.springframework.beans.factory.support.DefaultListableBeanFactory@6dd8f1
+2010-10-13 18:16:38   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-config.properties]
+2010-10-13 18:16:38   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-address.properties]
+2010-10-13 18:16:38   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [persist.properties]
+2010-10-13 18:16:38   INFO [main] (DefaultListableBeanFactory.java:414) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6dd8f1: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:19:10   INFO [main] (FrameworkServlet.java:277) - FrameworkServlet 'SpringMVC': initialization started
+2010-10-13 18:19:10   INFO [main] (AbstractApplicationContext.java:411) - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@14c4ac9: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 18:19:10 CST 2010]; root of context hierarchy
+2010-10-13 18:19:10   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-front.xml]
+2010-10-13 18:19:10   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-persist.xml]
+2010-10-13 18:19:10   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-service.xml]
+2010-10-13 18:19:10   INFO [main] (AbstractApplicationContext.java:426) - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@14c4ac9]: org.springframework.beans.factory.support.DefaultListableBeanFactory@154de0b
+2010-10-13 18:19:10   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-config.properties]
+2010-10-13 18:19:10   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-address.properties]
+2010-10-13 18:19:10   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [persist.properties]
+2010-10-13 18:19:10   INFO [main] (DefaultListableBeanFactory.java:414) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@154de0b: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 18:21:05   INFO [main] (MLog.java:80) - MLog clients using log4j logging.
+2010-10-13 18:21:05   INFO [main] (C3P0Registry.java:204) - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2010-10-13 18:21:06   INFO [main] (AbstractPoolBackedDataSource.java:462) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> z8kfsx8b19t7nhup8n8a|ebdfff, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> z8kfsx8b19t7nhup8n8a|ebdfff, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/reborn?useUnicode=true&characterEncoding=utf-8&autoReconnect=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {c3p0.maxIdleTime=25000, user=******, c3p0.timeout=5000, c3p0.max_statement=100, automaticTestTable=admin_user, c3p0.testConnectionOnCheckout=true, c3p0.maxPoolSize=50, password=******, c3p0.minPoolSize=2, c3p0.idleConnectionTestPeriod=18000}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2010-10-13 18:21:06   INFO [main] (FrameworkServlet.java:296) - FrameworkServlet 'SpringMVC': initialization completed in 116553 ms
+2010-10-13 19:13:50   INFO [Thread-7] (AbstractApplicationContext.java:815) - Closing org.springframework.web.context.support.XmlWebApplicationContext@14c4ac9: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 18:19:10 CST 2010]; root of context hierarchy
+2010-10-13 19:13:50   INFO [Thread-7] (DefaultSingletonBeanRegistry.java:421) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@154de0b: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 19:14:20   INFO [main] (FrameworkServlet.java:277) - FrameworkServlet 'SpringMVC': initialization started
+2010-10-13 19:14:20   INFO [main] (AbstractApplicationContext.java:411) - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@13ada: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 19:14:20 CST 2010]; root of context hierarchy
+2010-10-13 19:14:20   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-front.xml]
+2010-10-13 19:14:20   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-persist.xml]
+2010-10-13 19:14:20   INFO [main] (XmlBeanDefinitionReader.java:323) - Loading XML bean definitions from class path resource [spring-service.xml]
+2010-10-13 19:14:20   INFO [main] (AbstractApplicationContext.java:426) - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@13ada]: org.springframework.beans.factory.support.DefaultListableBeanFactory@8d1800
+2010-10-13 19:14:20   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-config.properties]
+2010-10-13 19:14:20   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [web-address.properties]
+2010-10-13 19:14:20   INFO [main] (PropertiesLoaderSupport.java:178) - Loading properties file from class path resource [persist.properties]
+2010-10-13 19:14:21   INFO [main] (DefaultListableBeanFactory.java:414) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8d1800: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
+2010-10-13 19:14:29   INFO [main] (MLog.java:80) - MLog clients using log4j logging.
+2010-10-13 19:14:29   INFO [main] (C3P0Registry.java:204) - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2010-10-13 19:14:30   INFO [main] (AbstractPoolBackedDataSource.java:462) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> z8kfsx8b19v4c6d5oh9ur|1f0c45f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> z8kfsx8b19v4c6d5oh9ur|1f0c45f, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/reborn?useUnicode=true&characterEncoding=utf-8&autoReconnect=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {c3p0.maxIdleTime=25000, user=******, c3p0.timeout=5000, c3p0.max_statement=100, automaticTestTable=admin_user, c3p0.testConnectionOnCheckout=true, c3p0.maxPoolSize=50, password=******, c3p0.minPoolSize=2, c3p0.idleConnectionTestPeriod=18000}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2010-10-13 19:14:31   INFO [main] (FrameworkServlet.java:296) - FrameworkServlet 'SpringMVC': initialization completed in 10989 ms
+2010-10-13 19:15:04   INFO [http-8071-1] (ServletToolboxManager.java:166) - Using config file '/WEB-INF/vm-toolbox.xml'
+2010-10-13 19:15:04   INFO [http-8071-1] (ServletToolboxManager.java:235) - XHTML is set to true
+2010-10-13 20:02:18   INFO [Thread-7] (AbstractApplicationContext.java:815) - Closing org.springframework.web.context.support.XmlWebApplicationContext@13ada: display name [WebApplicationContext for namespace 'SpringMVC-servlet']; startup date [Wed Oct 13 19:14:20 CST 2010]; root of context hierarchy
+2010-10-13 20:02:18   INFO [Thread-7] (DefaultSingletonBeanRegistry.java:421) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8d1800: defining beans [rootController,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,propertyPlaceholderConfigurer,addressPropertyPlaceholderConfigurer,pageFactory,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,velocityEngine,velocityConfig,viewResolver,companyInfoDao,cacheCategoryDao,categoryDao,systemLogDao,authGroupDao,adminUserDao,authObjectRelateUserDao,authObjectRelateGroupDao,authObjectDao,propertyConfig,dataSource,sqlMapClient,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,companyInfoService,categoryService,systemLogService,authObjectRelateGroupService,adminUserService,authObjectRelateUserService,authGroupService,authObjectService]; root of factory hierarchy
